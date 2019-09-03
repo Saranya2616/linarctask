@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>
+            Input table
+        </title>
+        <style>
+            tr{
+                cursor: pointer;
+            }
+            table{
+                border: orangered;
+                width: 20%;
+                height: 20%;
+            }
+        </style>
+    </head>
+        <body>
+            <center><h2>Click on any Element in the table </h2></center>
+
+
+        
+        <table id="table" border="1" style="margin: 0 auto">
+            <tr>
+            <th>Name</th>
+            <th>Designation</th>
+            </tr>
+
+            
+            <tr>
+                    <td>Raj</td>
+                    <td>Project Manager</td>
+                </tr>
+
+                <tr>
+                        <td>Arun</td>
+                        <td>Project Leader</td>
+                    </tr>
+
+                    <tr>
+                            <td>Akaash</td>
+                            <td>Team Leader</td>
+                        </tr>
+
+                        <tr>
+                                <td>Athiban</td>
+                                <td>Module Leader</td>
+                            </tr>
+
+                            <tr>
+                                    <td>Babu</td>
+                                    <td>Project Trainee</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Hariharan</td>
+                                        <td>Quality Analyst</td>
+                                    </tr>
+
+                                    <tr>
+                                            <td>Jeyakumar</td>
+                                            <td>Architect</td>
+                                        </tr>
+
+            
+        </table>
+        <div style=' margin-left:30em; margin-top:2em'>
+        <input type="text" name="fname" id="fname" align="center"> 
+        <input type="text" name="desig" id="desig" align="center">
+        </div>
+        
+        <script>
+            var table= document.getElementById('table'),rIndex;
+            for(var i=1;i<table.rows.length;i++)
+            {
+                table.rows[i].onclick=function(){
+                    document.getElementById("fname").value=this.cells[0].innerHTML;
+                    document.getElementById("desig").value=this.cells[1].innerHTML;
+                }
+
+            };
+
+        </script>  
+</body>
+
+        
+    
+
+</html>
